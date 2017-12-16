@@ -1,0 +1,22 @@
+<template>
+  <footer>
+      <div class="wrapper">
+          <div class="col">
+              <p>VidFireTV was created by Kyle Tryon</p>
+          </div>
+          <div class="col">second column</div>
+          <div class="col">third column</div>
+      </div>
+  </footer>
+</template>
+
+<style lang="scss" scoped>
+    footer {
+        color: $color-white;
+        background-color: $color-main;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+</style>
