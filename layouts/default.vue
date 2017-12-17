@@ -67,12 +67,14 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   margin: 0;
   line-height: 1.4em;
+  transition: all 0.3s;
 }
 
 
 .wrapper {
-  max-width: 800px;
+  max-width: 95%;
   margin: auto;
+  min-width: 400px;
 }
 
 /*### Styles  ###*/
@@ -113,4 +115,13 @@ p {
 .btnCTA {
   background-color: $color-CTA;
 }
+
+
+  /* Media Queries */
+
+  @media only screen and (min-width: $devDesktop ) {
+      .wrapper {
+        max-width: $wrapperXL;
+      }
+    }
 </style>

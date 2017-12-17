@@ -10,11 +10,8 @@ import Nuxt from './components/nuxt.vue'
 import App from './App.vue'
 import { getContext, getLocation } from './utils'
 import { createStore } from './store.js'
+import plugin0 from 'plugin0'
 
-
-import fontawesome from '@fortawesome/fontawesome'
-import brands from '@fortawesome/fontawesome-free-brands'
-import { faSpinner } from '@fortawesome/fontawesome-free-solid'
 
 // Component: <no-ssr>
 Vue.component(NoSSR.name, NoSSR)
@@ -143,6 +140,7 @@ async function createApp (ssrContext) {
   
 
   
+  if (typeof plugin0 === 'function') await plugin0(ctx, inject)
   
 
   if (process.server && ssrContext && ssrContext.url) {

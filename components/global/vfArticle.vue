@@ -9,8 +9,14 @@
       <div class="blogTitle">
         <h1 itemprop="headline">BLOG TITLE</h1>
       <div class="timeRow">
-        <time itemprop="datePublished" content="2018-03-09">March 9, 2018</time>
-        <time itemprop="timeRequired" datetime="1m">1m</time>
+        <time itemprop="datePublished" content="2018-03-09">
+          <font-awesome-icon icon="calendar-alt" size="xs"/>
+          March 9, 2018
+          </time>
+        <time itemprop="timeRequired" datetime="1m">
+          <font-awesome-icon icon="clock" size="xs"/>
+          1m
+          </time>
      </div>
     </div> 
   </header>
@@ -20,7 +26,6 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente voluptate nisi nam  in sunt nihil culpa. lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente voluptate nisi nam inventore tempora veritatis rem commodi? Quibusdam veniam numquam corporis blanditiis possimus incidunt obcaecati in sunt nihil culpa. lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente voluptate nisi nam inventore tempora veritatis rem commodi? Quibusdam veniam numquam corporis blanditiis possimus incidunt obcaecati in sunt nihil culpa. lorem </p> 
     <p> obcaecati in sunt nihil culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente voluptate nisi nam inventore tempora veritatis rem commodi? Quibusdam veniam numquam corporis blanditiis possimus incidunt obcaecati in sunt nihil culpa. lorem lorem</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. veritatis rem commodi?  lorem lorem Quibusdam veniam numquam corporis blanditiis possimus incidunt obcaecati in sunt nihil culpa. lorem lorem Quibusdam veniam numquam corporis blanditiis possimus incidunt obcaecati in sunt nihil culpa. lorem lorem</p>
-    <font-awesome-icon :icon="['fab', 'facebook']" />
   </main>
 
   <section class="blogAuthor" itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -30,7 +35,7 @@
     </div>
     <div class="authorBio">
       <h2 itemprop="name">John Doe</h2>
-      <button class="btn">Subscribe</button>
+      <a href="#"><button class="btn">Subscribe</button></a>      
       <p itemprop="description">A YouTuber and blogger, making content online</p>
       <div class="social">
         <ul>
@@ -89,6 +94,11 @@ export default {
   .blogTitle {
     text-align: center;
     padding: 1.5em;
+
+    h1 {
+      font-size: 2.5em;
+    }
+    
   }
 
   .timeRow {
@@ -111,12 +121,15 @@ export default {
   .articlePublisher {
     display: flex;
     align-items: center;
+    margin: auto;
   }
 
   .blogAuthor {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 1em;
+    margin-top: -2em;
   }
 
   .social {
@@ -126,11 +139,21 @@ export default {
     padding: 0.5em;
 
     ul {
+      flex: 1;
+      padding: 0px;
       list-style-type: none;
       text-decoration: none;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+    }
+
+    a {
+      @include resetLinks;
+    }
+
+    a :hover {
+      @include floatLinks;
     }
 }
 

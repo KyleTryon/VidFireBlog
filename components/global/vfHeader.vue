@@ -6,9 +6,11 @@
               <h1 id="siteTitle" >VidFireTV</h1>
               <h2>BLOG</h2>
           </div>
-          <div class="btn btnCTA">
+          <a href="#">
+            <div class="btn btnCTA">
               COMMUNITY
-          </div>
+            </div>
+          </a>
       </div>
   </header>
 </template>
@@ -18,12 +20,19 @@
         background-color: $color-main;
         color: $color-white;
         padding: 0.4em;
+        min-height: 6em;
+        display: flex;
+    }
+
+    a {
+        @include resetLinks;
     }
 
     .wrapper{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        align-content: center;
     }
 
     #siteTitle:after {

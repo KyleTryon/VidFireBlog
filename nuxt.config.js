@@ -13,6 +13,12 @@ module.exports = {
   modules: [
     ['nuxt-sass-resources-loader', './assets/scss/vars.scss']
   ],
+  css: [
+    '@fortawesome/fontawesome/styles.css'
+  ],
+  plugins: [
+    '~/plugins/font-awesome'
+  ],
   /*
   ** Headers of the page
   */

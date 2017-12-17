@@ -4,6 +4,7 @@ $color-white: #FFF;
 $color-grayLight: #ecf0f1;
 $color-CTA: #f39c12;
 $color-text: rgba(0,0,0,0.87);
+$color-link: #3498db;
 
 $font-title: 'Lato', sans-serif;
 $font-main: 'Barlow Semi Condensed', sans-serif;
@@ -12,8 +13,11 @@ $border-radius: 0.2em;
 $box-shadow: 0 0.2em 1em -0.3em rgba(0,0,0,.75);
 
 
+/* Device Widths */
+$devDesktop: 900px;
+
 /* Layout */
-$wrapperXL: 1250px;
+$wrapperXL: 900px;
 $wrapperMD: 80%;
 $wrapperSM: 95%;
 
@@ -21,4 +25,9 @@ $wrapperSM: 95%;
 @mixin resetLinks {
     text-decoration: none;
     color: inherit;
+}
+
+@mixin floatLinks {
+    color: $color-link;
+    transform: translateY(-2px);
 }

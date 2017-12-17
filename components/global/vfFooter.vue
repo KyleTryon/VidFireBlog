@@ -18,5 +18,14 @@
 
     .wrapper {
         display: flex;
+        flex-direction: column;
+    }
+
+        /* Media Queries */
+
+    @media only screen and (min-width: $devDesktop ) {
+        .wrapper {
+            flex-direction: row;
+        }
     }
 </style>
