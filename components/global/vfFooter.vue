@@ -14,6 +14,7 @@
     footer {
         color: $color-white;
         background-color: $color-main;
+        text-align: center;
     }
 
     .wrapper {
