@@ -82,7 +82,6 @@
   .blogImg {
     width: 100%;
     height: auto;
-    padding: 0.2em;
   }
 
 
@@ -99,21 +98,50 @@
   }
   /*### UI  ###*/
 
+  a {
+    @include resetLinks;
+  }
+
   .btn {
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 1.1em;
+    font-weight: 500;
     border: none;
-    padding: 0.2em 0.6em;
+    padding: 0.4em 1em;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     background-color: $color-main;
     color: $color-white;
     text-shadow: 0px 0.1em 0px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: inline-block;
+    line-height: 2em;
   }
 
   .btnCTA {
     background-color: $color-CTA;
+  }
+
+  .btnReadMore {
+    background-color: $color-white;
+    color: $color-main;
+    border: 3px solid $color-main;
+    font-size: 1em;
+    margin: 0.3em 0px;
+    padding: 0.05em 2em;
+  }
+
+  .btnReadMore:hover {
+    background-color:$color-main;
+    color: $color-white;
+  }
+
+  input[type=text] {
+    padding: 1.1em;
+    text-align: center;
+    border: none;
+    box-shadow: $box-shadow;
+    margin: 0.2em 0.5em;
   }
   /* ### Media Queries ### */
   /* Desktop */

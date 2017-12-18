@@ -33,7 +33,7 @@
 
       <header>
         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <img class="blogImg" src="https://i.imgur.com/acwq7f7.png" itemprop="url">
+          <img class="blogImg" src="https://i.imgur.com/tDGbXRR.jpg" itemprop="url">
         </div>
         <div class="blogTitle">
           <h1 itemprop="headline">BLOG TITLE</h1>
@@ -43,7 +43,7 @@
             <font-awesome-icon icon="calendar-alt" size="xs" /> March 9, 2018
           </time>
           <time itemprop="timeRequired" datetime="1m">
-            <font-awesome-icon icon="clock" size="xs" /> 1m
+            <font-awesome-icon :icon="['far', 'clock']" size="xs" /> 1m
           </time>
         </div>
       </header>

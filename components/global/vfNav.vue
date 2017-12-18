@@ -13,6 +13,11 @@
 </template>
 
 <style lang="scss" scoped>
+
+    nav {
+        border-bottom: solid 1px $color-grayLight;
+    }
+
     .nav {
         display: flex;
         flex-direction: column;
