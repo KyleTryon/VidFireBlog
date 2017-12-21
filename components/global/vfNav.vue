@@ -16,6 +16,7 @@
 
     nav {
         border-bottom: solid 1px $color-grayLight;
+        margin-bottom: 0.5em;
     }
 
     .nav {

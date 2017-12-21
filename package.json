@@ -19,7 +19,8 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.1",
     "@fortawesome/vue-fontawesome": "0.0.21",
     "contentful": "^5.0.5",
-    "nuxt": "^1.0.0-rc11"
+    "nuxt": "^1.0.0-rc11",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

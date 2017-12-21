@@ -50,6 +50,11 @@
         min-height: 200px;
         text-align: center;
         padding: 0.4em;
+
+        h1 {
+            position: relative;
+            top: -1em;
+        }
       }
 
       .header {

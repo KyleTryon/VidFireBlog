@@ -27,7 +27,7 @@
 
   html {
     font-family: $font-main;
-    font-size: 18px;
+    font-size: 20px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -107,14 +107,13 @@
     font-size: 1.1em;
     font-weight: 500;
     border: none;
-    padding: 0.4em 1em;
+    padding: 0.6em 1em;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     background-color: $color-main;
     color: $color-white;
     text-shadow: 0px 0.1em 0px rgba(0, 0, 0, 0.05);
     text-align: center;
-    display: inline-block;
     line-height: 2em;
   }
 

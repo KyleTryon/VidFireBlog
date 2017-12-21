@@ -58,6 +58,12 @@
 <script>
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import vfBlogCard from '~/components/global/vfBlogCard'
+
+/*
+  import {createClient} from '~/plugins/contentful.js'
+
+  const client = createClient()
+*/
   export default {
     components: {
       FontAwesomeIcon,
