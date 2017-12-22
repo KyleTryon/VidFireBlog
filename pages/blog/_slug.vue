@@ -33,7 +33,7 @@
 
       <header>
         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <img class="blogImg" :src="post.fields.headerImage.fields.file.url" itemprop="url">
+          <img class="blogImg" :src="post.fields.headerImage" itemprop="url">
         </div>
         <div class="blogTitle">
           <h1 itemprop="headline"> {{post.fields.title}} </h1>

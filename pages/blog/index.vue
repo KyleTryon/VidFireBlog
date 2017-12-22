@@ -11,12 +11,7 @@
             <small>Only quality posts. No spam, no nonsense. That's a promise!</small>
         </section>
         <section class="blogFeed">
-            <vf-blog-card />
-            <vf-blog-card />
-            <vf-blog-card />
-            <vf-blog-card />
-            <vf-blog-card />
-            <vf-blog-card />
+            <vf-blog-card v-for="post in posts" v-bind:article="post"/>
         </section>
     </main>
 </template>
@@ -59,12 +54,21 @@
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import vfBlogCard from '~/components/global/vfBlogCard'
 
-/*
   import {createClient} from '~/plugins/contentful.js'
-
   const client = createClient()
-*/
+
   export default {
+    asyncData ({ env, params }) {
+      return client.getEntries({
+        'content_type': env.CTF_BLOG_TYPE_ID,
+        order: '-sys.createdAt'
+      }).then(entries => {
+        console.log(entries.items[0].fields)
+        return {
+          posts: entries.items
+        }
+      })
+    },
     components: {
       FontAwesomeIcon,
       vfBlogCard

@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="body">
-        <h1>5 Tricks To Improve Your Camera Quality. feat. YOUTUBER</h1>
+        <h1>{{article.fields.title}}</h1>
         <a href="#" class="btn btnReadMore">READ</a>
       </div>
     </div>
@@ -87,7 +87,9 @@
 
 <script>
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+
   export default {
+    props: [article],
     components: {
       FontAwesomeIcon
     }
