@@ -63,7 +63,7 @@
         'content_type': env.CTF_BLOG_TYPE_ID,
         order: '-sys.createdAt'
       }).then(entries => {
-        console.log(entries.items[0].fields)
+        console.log(entries.items[0].fields.headerImage)
         return {
           posts: entries.items
         }
