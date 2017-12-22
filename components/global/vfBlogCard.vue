@@ -89,7 +89,7 @@
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
   export default {
-    props: [article],
+    props: ['article'],
     components: {
       FontAwesomeIcon
     }
