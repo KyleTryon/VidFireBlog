@@ -11,7 +11,7 @@
             <small>Only quality posts. No spam, no nonsense. That's a promise!</small>
         </section>
         <section class="blogFeed">
-            <vf-blog-card v-for="post in posts" v-bind:article="post"/>
+            <vf-blog-card v-for="post in posts" :key="post.sys.id" v-bind:article="post"/>
         </section>
     </main>
 </template>
@@ -63,7 +63,7 @@
         'content_type': env.CTF_BLOG_TYPE_ID,
         order: '-sys.createdAt'
       }).then(entries => {
-        console.log(entries.items[0].fields.headerImage)
+        console.log(entries.items)
         return {
           posts: entries.items
         }
