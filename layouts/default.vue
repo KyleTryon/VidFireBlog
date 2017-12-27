@@ -84,6 +84,9 @@
     height: auto;
   }
 
+  small, em {
+    padding: 0.5em;
+  }
 
   p {
     padding: 1em;

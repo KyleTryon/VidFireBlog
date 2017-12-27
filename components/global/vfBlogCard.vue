@@ -3,7 +3,7 @@
     <div class="blogCard">
       <div class="header">
         <div class="articleImage">
-          <img class="blogImg" src="https://i.imgur.com/tDGbXRR.jpg" itemprop="url">
+          <img class="blogImg" itemprop="url" :src="article['fields'].headerImage['fields']['file'].url">
         </div>
         <div class="info">
           <img class="authorAvatar" src="https://i.imgur.com/ieOYJmd.png" width="100px" height="100px" alt="author picture">
@@ -12,7 +12,7 @@
               <a href="#" class="blogAuthorLink">RoboSquidTV</a>
             </span>
             <time itemprop="datePublished" content="2018-03-09">
-              March 9, 2018
+              {{( new Date(article['fields'].published).toDateString() )}}
             </time>
           </div>
           <time class="blogTime" itemprop="timeRequired" datetime="1m">
@@ -21,7 +21,8 @@
         </div>
       </div>
       <div class="body">
-        <h1>{{article.fields.title}}</h1>
+        <h1>{{article['fields'].title}}</h1>
+        <span> {{article['fields'].headerImage['fields']['file'].url}} </span>
         <a href="#" class="btn btnReadMore">READ</a>
       </div>
     </div>
@@ -87,7 +88,12 @@
 
 <script>
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-
+  /* I think the API is not always returning the full image.
+ And it may be hard to tell because it may work from one build
+ but not the next. Modify this comment to refetch heroImage.
+ fields which seems to have stopped working after previously working.
+ edit: 06
+ */
   export default {
     props: ['article'],
     components: {

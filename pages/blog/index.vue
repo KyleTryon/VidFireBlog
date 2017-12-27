@@ -20,6 +20,9 @@
     main {
         display: flex;
         flex-direction: column;
+        &.wrapper {
+            flex: 1;
+        }
     }
     section.CTA {
         text-align: center;
@@ -60,10 +63,10 @@
   export default {
     asyncData ({ env, params }) {
       return client.getEntries({
-        'content_type': env.CTF_BLOG_TYPE_ID,
+        'content_type': env.CTF_BLOG_POST_TYPE_ID,
         order: '-sys.createdAt'
       }).then(entries => {
-        console.log(entries.items[0].sys.contentType)
+        console.dir(entries.items[0].fields.headerImage['fields'].file.url)
         return {
           posts: entries.items
         }

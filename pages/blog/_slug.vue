@@ -33,7 +33,7 @@
 
       <header>
         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <img class="blogImg" :src="post.fields.headerImage" itemprop="url">
+          <img class="blogImg" :src="post.fields.headerImage.fields.file.url" itemprop="url">
         </div>
         <div class="blogTitle">
           <h1 itemprop="headline"> {{post.fields.title}} </h1>
@@ -55,7 +55,7 @@
       <section class="blogAuthor" itemprop="author" itemscope itemtype="https://schema.org/Person">
 
         <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img class="authorAvatar" :src="post.fields.author.fields.avatar" itemprop="url" width="150px" height="150px" alt="author picture">
+          <img class="authorAvatar" src="x" itemprop="url" width="150px" height="150px" alt="author picture">
         </div>
         <div class="authorBio">
           <h2 itemprop="name">{{post.fields.author.fields.name}}</h2>
@@ -277,7 +277,7 @@
         'content_type': env.CTF_BLOG_POST_TYPE_ID,
         'fields.slug': params.slug
       }).then(entries => {
-        console.log(entries.items[0].fields.headerImage)
+        console.log(entries.items[0])
         return {
           post: entries.items[0]
         }
