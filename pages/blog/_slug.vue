@@ -55,7 +55,7 @@
       <section class="blogAuthor" itemprop="author" itemscope itemtype="https://schema.org/Person">
 
         <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img class="authorAvatar" src="x" itemprop="url" width="150px" height="150px" alt="author picture">
+          <img class="authorAvatar" :src="post.fields.author.fields.avatar.fields.file.url" itemprop="url" width="150px" height="150px" alt="author picture">
         </div>
         <div class="authorBio">
           <h2 itemprop="name">{{post.fields.author.fields.name}}</h2>
@@ -103,7 +103,7 @@
           <span itemprop="name">VidFireTV</span>
 
         </div>
-        <div v-if="post.fields.credits.length > 0" class="blogCredits">
+        <div v-if="post.fields.credits > 0" class="blogCredits">
           <span>credits</span>
           <ul>
             <li v-for="credit in post.fields.credits">
@@ -181,7 +181,6 @@
     margin-top: 2em;
 
     p {
-      text-indent: 1em;
       line-height: 1.4em;
 
       img {
@@ -277,7 +276,7 @@
         'content_type': env.CTF_BLOG_POST_TYPE_ID,
         'fields.slug': params.slug
       }).then(entries => {
-        console.log(entries.items[0])
+        // console.log(entries.items[0])
         return {
           post: entries.items[0]
         }

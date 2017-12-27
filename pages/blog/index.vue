@@ -66,7 +66,7 @@
         'content_type': env.CTF_BLOG_POST_TYPE_ID,
         order: '-sys.createdAt'
       }).then(entries => {
-        console.dir(entries.items[0].fields.headerImage['fields'].file.url)
+        // console.dir(entries.items[0].fields.headerImage['fields'].file.url)
         return {
           posts: entries.items
         }

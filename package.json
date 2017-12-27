@@ -18,7 +18,9 @@
     "@fortawesome/fontawesome-free-regular": "^5.0.1",
     "@fortawesome/fontawesome-free-solid": "^5.0.1",
     "@fortawesome/vue-fontawesome": "0.0.21",
+    "ava": "^0.24.0",
     "contentful": "^5.0.5",
+    "jsdom": "^11.5.1",
     "nuxt": "^1.0.0-rc11",
     "vue-markdown": "^2.2.4"
   },

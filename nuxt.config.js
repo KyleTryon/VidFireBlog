@@ -1,14 +1,21 @@
-const config = require('./.contentful.json')
+const ctfConfig = require('./.contentful.json')
+
+const {createClient} = require('./plugins/contentful')
+const cdaClient = createClient(ctfConfig)
+const cmaContentful = require('contentful-management')
+const cmaClient = cmaContentful.createClient({
+  accessToken: ctfConfig.CTF_CMA_ACCESS_TOKEN
+})
 
 module.exports = {
   /*
   ** Contentful
   */
   env: {
-    CTF_SPACE_ID: config.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
-    CTF_PERSON_ID: config.CTF_PERSON_ID,
-    CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID
+    CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
+    CTF_PERSON_ID: ctfConfig.CTF_PERSON_ID,
+    CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
   },
   modules: [
     ['nuxt-sass-resources-loader', './assets/scss/vars.scss']
@@ -57,5 +64,26 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  generate: {
+    routes () {
+      return Promise.all([
+        // get all blog posts
+        cdaClient.getEntries({
+          'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
+        }),
+        // get the blog post content type
+        cmaClient.getSpace(ctfConfig.CTF_SPACE_ID)
+          .then(space => space.getContentType(ctfConfig.CTF_BLOG_POST_TYPE_ID))
+      ])
+        .then(([entries, postType]) => {
+          return [
+            // map entries to URLs
+            ...entries.items.map(entry => `/blog/${entry.fields.slug}`),
+            // map all possible tags to URLs
+            ...postType.fields.find(field => field.id === 'tags').items.validations[0].in.map(tag => `/tags/${tag}`)
+          ]
+        })
+    }
+  },
 }

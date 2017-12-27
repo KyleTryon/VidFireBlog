@@ -6,25 +6,24 @@
           <img class="blogImg" itemprop="url" :src="article['fields'].headerImage['fields']['file'].url">
         </div>
         <div class="info">
-          <img class="authorAvatar" src="https://i.imgur.com/ieOYJmd.png" width="100px" height="100px" alt="author picture">
+          <img class="authorAvatar" :src="article['fields'].author['fields']['avatar']['fields'].file.url" width="100px" height="100px" alt="author picture">
           <div class="meta">
             <span>by:
               <a href="#" class="blogAuthorLink">RoboSquidTV</a>
             </span>
-            <time itemprop="datePublished" content="2018-03-09">
+            <time itemprop="datePublished" :content="( new Date(article['fields'].published).toISOString() )">
               {{( new Date(article['fields'].published).toDateString() )}}
             </time>
           </div>
-          <time class="blogTime" itemprop="timeRequired" datetime="1m">
-            <font-awesome-icon :icon="['far', 'clock']" /> 1m
+          <time class="blogTime" itemprop="timeRequired" :datetime="time + 'm'">
+            <font-awesome-icon :icon="['far', 'clock']" /> {{time}}m
           </time>
         </div>
       </div>
       <div class="body">
         <h1>{{article['fields'].title}}</h1>
-        <span>{{time}}</span>
-        <a href="#" class="btn btnReadMore">READ</a>
       </div>
+      <nuxt-link :to="{ name: 'blog-slug', params: { slug: article['fields'].slug }}" class="btn btnReadMore">READ MORE</nuxt-link>
     </div>
   </div>
 </template>
@@ -32,12 +31,24 @@
 <style lang="scss" scoped>
   .blogCardContainer {
     padding: 1em;
+    display: flex;
 
     .blogCard {
-      display: block;
+      display: flex;
+      flex-direction: column;
       width: 300px;
       box-shadow: $box-shadow;
       border-radius: $border-radius;
+      flex: 1;
+
+      h1 {
+        margin: 0em;
+      }
+
+      .btnReadMore {
+        justify-self: flex-end;
+        margin: 1em;
+      }
 
       .authorAvatar {
         border-radius: 50%;
@@ -48,9 +59,11 @@
       }
 
       .body {
-        min-height: 200px;
+        display: flex;
         text-align: center;
         padding: 0.4em;
+        align-items: center;
+        flex: 1;
 
         h1 {
             position: relative;
@@ -92,7 +105,7 @@
  And it may be hard to tell because it may work from one build
  but not the next. Modify this comment to refetch heroImage.
  fields which seems to have stopped working after previously working.
- edit: 07
+ edit: 08
  */
   export default {
     props: ['article'],
@@ -101,7 +114,9 @@
     },
     computed: {
       time: function () {
-        return this.article.fields.body.toString()
+        let count = this.article.fields.body.toString().split(' ').length
+        let time = Math.ceil(count / 200)
+        return time
       }
     }
   }

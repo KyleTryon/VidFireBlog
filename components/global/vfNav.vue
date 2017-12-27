@@ -2,7 +2,7 @@
   <nav>
       <ul class="wrapper">
           <div class="nav">
-            <a href="#"><li>HOME</li></a>
+            <nuxt-link to="/"><li>HOME</li></nuxt-link>
             <nuxt-link to="/blog"><li>BLOG</li></nuxt-link>
             <a href="#"><li>GUIDES</li></a>
             <a href="#"><li>CONTACT</li></a>

@@ -27,7 +27,7 @@
 
   html {
     font-family: $font-main;
-    font-size: 20px;
+    font-size: 18px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -60,6 +60,7 @@
   h6 {
     font-family: $font-title;
     font-weight: bold;
+    margin: 1em 0em;
   }
 
   *,
@@ -73,7 +74,7 @@
 
 
   .wrapper {
-    max-width: 95%;
+    max-width: 70%;
     margin: auto;
     min-width: 400px;
   }
@@ -89,9 +90,9 @@
   }
 
   p {
-    padding: 1em;
     word-spacing: 0.3em;
     line-height: 1.2em;
+    margin: 1em 0em;
   }
 
   .col {
@@ -118,6 +119,7 @@
     text-shadow: 0px 0.1em 0px rgba(0, 0, 0, 0.05);
     text-align: center;
     line-height: 2em;
+    margin: 0.4em 0em
   }
 
   .btnCTA {
