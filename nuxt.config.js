@@ -24,7 +24,8 @@ module.exports = {
     '@fortawesome/fontawesome/styles.css'
   ],
   plugins: [
-    '~/plugins/font-awesome'
+    '~/plugins/font-awesome',
+    '~/plugins/contentful'
   ],
   /*
   ** Headers of the page
@@ -49,13 +50,10 @@ module.exports = {
   */
   build: {
     /*
-    ** Run ESLint on save
+    ** Run ESLINT on save
     */
     extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
-        /*
-        ** Extend webpack config here
-        */
+      if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -63,7 +61,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['> 5%']
+      })
+    ]
   },
   generate: {
     routes () {
@@ -85,5 +89,5 @@ module.exports = {
           ]
         })
     }
-  },
+  }
 }
