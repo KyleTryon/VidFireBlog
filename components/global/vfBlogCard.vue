@@ -22,7 +22,7 @@
       </div>
       <div class="body">
         <h1>{{article['fields'].title}}</h1>
-        <span> {{article['fields'].headerImage['fields']['file'].url}} </span>
+        <span>{{time}}</span>
         <a href="#" class="btn btnReadMore">READ</a>
       </div>
     </div>
@@ -92,12 +92,17 @@
  And it may be hard to tell because it may work from one build
  but not the next. Modify this comment to refetch heroImage.
  fields which seems to have stopped working after previously working.
- edit: 06
+ edit: 07
  */
   export default {
     props: ['article'],
     components: {
       FontAwesomeIcon
+    },
+    computed: {
+      time: function () {
+        return this.article.fields.body.toString()
+      }
     }
   }
 </script>
