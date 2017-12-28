@@ -21,8 +21,8 @@ test.before('Init Nuxt.js', async t => {
 // Example of testing only generated html
 test('Route /blog exits', async t => {
   let context = {}
-  const { html } = await nuxt.renderRoute('/', context)
-  t.true(html.includes('<small>Only quality posts. No spam, no nonsense. That\'s a promise!</small>>'))
+  const { html } = await nuxt.renderRoute('/blog', context)
+  t.true(html.includes('>Content</strong>'))
 })
 
 // Close server and ask nuxt to stop listening to file changes
