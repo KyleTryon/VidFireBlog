@@ -10,3 +10,5 @@ dist
 
 # Secret Keys
 .contentful.json
+
+.env

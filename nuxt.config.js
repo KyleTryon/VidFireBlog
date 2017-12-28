@@ -1,11 +1,15 @@
-/* const ctfConfig = require('./.contentful.json')          ## Loading in variables from CircleCI env */
+require('dotenv').config()
+/* const ctfConfig = require('./.contentful.json')          ## original */
 
 const ctfConfig = {
   CTF_SPACE_ID: process.env.CTF_SPACE_ID,
   CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
   CTF_PERSON_ID: process.env.CTF_PERSON_ID,
-  CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID
+  CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
+  CTF_CMA_ACCESS_TOKEN: process.env.CTF_CMA_ACCESS_TOKEN
 }
+
+console.dir(ctfConfig)
 
 const {createClient} = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
@@ -18,14 +22,15 @@ module.exports = {
   /*
   ** ## Contentful
   */
-/*
+
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
     CTF_PERSON_ID: ctfConfig.CTF_PERSON_ID,
-    CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
+    CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID,
+    CTF_CMA_ACCESS_TOKEN: ctfConfig.CTF_CMA_ACCESS_TOKEN
   },
-*/
+
   modules: [
     ['nuxt-sass-resources-loader', './assets/scss/vars.scss']
   ],

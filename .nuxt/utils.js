@@ -74,7 +74,7 @@ export function getContext (context, app) {
     isServer: !!context.isServer,
     isClient: !!context.isClient,
     isStatic: process.static,
-    isDev: false,
+    isDev: true,
     isHMR: context.isHMR || false,
     app: app,
     store: context.store,
@@ -82,7 +82,7 @@ export function getContext (context, app) {
     payload: context.payload,
     error: context.error,
     base: '/',
-    env: {"CTF_SPACE_ID":"6lqnknawo3ew","CTF_CDA_ACCESS_TOKEN":"f80ee720fcfa8408459bcedcde17d350a15182953ac7ef140494a9cc909d1168","CTF_PERSON_ID":"12NzArHkKYg4gKYIwgc4Gq","CTF_BLOG_POST_TYPE_ID":"blogPost"}
+    env: {"CTF_SPACE_ID":"6lqnknawo3ew","CTF_CDA_ACCESS_TOKEN":"f80ee720fcfa8408459bcedcde17d350a15182953ac7ef140494a9cc909d1168","CTF_PERSON_ID":"12NzArHkKYg4gKYIwgc4Gq","CTF_BLOG_POST_TYPE_ID":"blogPost","CTF_CMA_ACCESS_TOKEN":"CFPAT-f7a016bf68d0a07e7a15d31a2318423ae7c5e4a4701381fd547df1f42c1571e1"}
   }
   const next = context.next
   ctx.params = ctx.route.params || {}
