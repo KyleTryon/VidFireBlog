@@ -37,7 +37,7 @@
   }
 
   body {
-    min-height: 100vh;
+    min-height: 100%;
     color: $color-text;
     background-color: #fafafa;
   }

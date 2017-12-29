@@ -7,7 +7,6 @@
           <div class="col">second column</div>
           <div class="col">third column</div>
       </div>
-    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
   </footer>
 </template>
 

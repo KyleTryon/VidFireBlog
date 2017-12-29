@@ -9,8 +9,6 @@ const ctfConfig = {
   CTF_CMA_ACCESS_TOKEN: process.env.CTF_CMA_ACCESS_TOKEN
 }
 
-console.dir(ctfConfig)
-
 const {createClient} = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
 const cmaContentful = require('contentful-management')
