@@ -1,8 +1,13 @@
 version: 2
-jobs:
-  build:
-    docker:
+env: &env
+  docker:
       - image: circleci/node:9.2
+jobs:
+  test:
+    <<: *env
+
+  build:
+    <<: *env
     steps:
       - checkout
 

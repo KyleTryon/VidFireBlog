@@ -15,16 +15,18 @@ $box-shadow: 0 0.2em 1em -0.3em rgba(0,0,0,.75);
 
 /* Device Widths */
 $devDesktop: 900px;
+$devSmall: 600px;
 
 /* Layout */
 $wrapperXL: 1050px;
-$wrapperMD: 60%;
+$wrapperMD: 70%;
 $wrapperSM: 95%;
 
 /* Mixins */
 @mixin resetLinks {
     text-decoration: none;
     color: inherit;
+   // transition: all 0.3s;
 }
 
 @mixin floatLinks {

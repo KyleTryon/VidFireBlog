@@ -39,11 +39,11 @@
   body {
     min-height: 100vh;
     color: $color-text;
-    background-color: $color-white;
+    background-color: #fafafa;
   }
 
   #__nuxt {
-    min-height: 100vh;
+    min-height: 100%;
   }
 
   #app-container {
@@ -69,14 +69,14 @@
     box-sizing: border-box;
     margin: 0;
     line-height: 1.4em;
-    transition: all 0.3s;
   }
 
 
   .wrapper {
-    max-width: 70%;
+    max-width: $wrapperSM;
     margin: auto;
     min-width: 400px;
+    flex: 1;
   }
   /*### Styles  ###*/
 
@@ -111,7 +111,7 @@
     font-size: 1.1em;
     font-weight: 500;
     border: none;
-    padding: 0.6em 1em;
+    padding: 0.5em 1.5em;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     background-color: $color-main;
@@ -119,7 +119,12 @@
     text-shadow: 0px 0.1em 0px rgba(0, 0, 0, 0.05);
     text-align: center;
     line-height: 2em;
-    margin: 0.4em 0em
+    margin: 0.4em 0em;
+   // transition: all 0.3s;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
   }
 
   .btnCTA {
@@ -156,6 +161,12 @@
     }
     .shareCol {
       display: block;
+    }
+  }
+
+  @media only screen and (max-width: $devSmall) {
+    html {
+      font-size: 14px;
     }
   }
 

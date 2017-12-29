@@ -67,7 +67,7 @@ module.exports = {
     ** Run ESLINT on save
     */
     extend (config, ctx) {
-      config.plugins = config.plugins.filter((plugin) => plugin.constructor.name !== 'UglifyJsPlugin')
+    // config.plugins = config.plugins.filter((plugin) => plugin.constructor.name !== 'UglifyJsPlugin')   ## During testing with AVA, Uglify throws errors. Will come back to this but want generated uglified if possible
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

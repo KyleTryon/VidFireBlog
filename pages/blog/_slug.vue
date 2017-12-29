@@ -98,7 +98,7 @@
         <div class="articlePublisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
           Article published by:
           <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-            <img src="https://i.imgur.com/PeKLIH0.png" width="32px" height="32px" itemprop="url">
+            <img src="~/static/VidFireTV.svg" width="32px" height="32px" itemprop="url">
           </div>
           <span itemprop="name">VidFireTV</span>
 
@@ -180,12 +180,24 @@
   .blogContent {
     margin-top: 2em;
 
-    p {
-      line-height: 1.4em;
+    a {
+      @include resetLinks;
+      font-weight: bold;
+      font-size: 1.05em;
+      margin: 0.5em 0em;
+      color: $color-main;
+    }
 
-      img {
+    a:hover {
+      @include floatLinks;
+    }
+
+    img {
         margin: auto;
       }
+
+    p {
+      line-height: 1.4em;
     }
   }
 
@@ -207,6 +219,7 @@
     text-align: center;
     margin-bottom: 1em;
     margin-top: -2em;
+    
   }
 
   .social {
@@ -224,14 +237,6 @@
       flex-direction: row;
       justify-content: space-around;
     }
-
-    a {
-      @include resetLinks;
-    }
-
-    a :hover {
-      @include floatLinks;
-    }
   }
 
   .authorBio {
@@ -239,7 +244,8 @@
     box-shadow: $box-shadow;
     border: solid 1px $color-grayLight;
     padding-top: 75px;
-
+    background-color: $color-white;
+    
     h2 {
       margin: 0.5em;
     }
