@@ -5,10 +5,8 @@ node_modules
 npm-debug.log
 
 # Nuxt generate
-dist
 .nuxt
 
 # Secret Keys
 .contentful.json
-
 .env
