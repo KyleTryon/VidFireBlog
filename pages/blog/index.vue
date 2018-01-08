@@ -11,7 +11,7 @@
             <small>Only quality posts. No spam, no nonsense. That's a promise!</small>
         </section>
         <section class="blogFeed">
-            <vf-blog-card v-for="post in posts" :key="post.sys.id" v-bind:article="post"/>
+            <vf-blog-card v-for="post in posts" :key="post.sys.id" v-bind:article="post" />
         </section>
     </main>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <div id="app-container">
-    <vf-header/>
-    <vf-nav/>
-    <nuxt/>
-    <vf-footer/>
+    <vf-header />
+    <vf-nav />
+    <nuxt />
+    <vf-footer />
   </div>
 </template>
 

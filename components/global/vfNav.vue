@@ -1,14 +1,13 @@
 <template>
   <nav>
-      <ul class="wrapper">
-          <div class="nav">
-            <nuxt-link to="/"><li>HOME</li></nuxt-link>
-            <nuxt-link to="/blog"><li>BLOG</li></nuxt-link>
-            <a href="#"><li>GUIDES</li></a>
-            <a href="#"><li>CONTACT</li></a>
-          </div>
-          
-      </ul>
+      <div class="wrapper">
+          <ul class="nav">
+            <li><nuxt-link to="/">HOME</nuxt-link></li>
+            <li><nuxt-link to="/blog">BLOG</nuxt-link></li>
+            <li><a href="#">GUIDES</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+      </div>
   </nav>
 </template>
 
