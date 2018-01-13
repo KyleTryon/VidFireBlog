@@ -40,6 +40,7 @@
       box-shadow: $box-shadow;
       border-radius: $border-radius;
       flex: 1;
+      background-color: $color-white;
 
       h1 {
         margin: 0em;
@@ -78,7 +79,7 @@
         min-height: 100px;
 
         .info {
-            padding: 0.4em;
+            padding: 1em;
             display: flex;
             justify-content: space-between;
             font-size: 0.8em;

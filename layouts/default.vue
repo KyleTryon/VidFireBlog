@@ -120,11 +120,11 @@
     text-align: center;
     line-height: 2em;
     margin: 0.4em 0em;
-   // transition: all 0.3s;
+    transition: all 0.3s;
   }
 
   .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   .btnCTA {
