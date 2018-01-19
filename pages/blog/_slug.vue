@@ -192,12 +192,12 @@
       @include floatLinks;
     }
 
-    img {
-        margin: auto;
-      }
-
     p {
       line-height: 1.4em;
+
+      img {
+        margin: auto;
+      }
     }
   }
 

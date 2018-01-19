@@ -1,58 +1,39 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        vidfire-blog
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
+<main class="wrapper" id="homeMain">
+  <section>
+    <h1>The Better YouTuber Community</h1>
+    <img src="~/static/VidFireTV.svg" width="200px" height="auto" alt="vidfire logo">
+    <p><strong>VidFireTV</strong> is a blog and community for video content creators, typically YouTubers. Get masterful tips on the blog, written by and for YouTubers.</p>
+    <p>Join the community! Our semi private community for professional content creators is the best place online to connect with other creators without the mess and spam you'll often find. Enjoy truly quality discussion with other professionals</p>
+  </section>
+  <section class="communityTab">
+    <div class="left">
+      <a href="#"><h1 class="btn">Join The Community</h1></a>
+    </div>
+    <div class="right">
+      <img src="~/static/Discord.jpg" alt="Discord Server">
     </div>
   </section>
+</main>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
+<style lang="scss">
 
-export default {
-  components: {
-    Logo
+  #homeMain {
+    text-align: center;
   }
-}
-</script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  .communityTab {
+    display: flex;
+    flex-direction: row;
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+    .left, .right {
+      flex: 1;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
