@@ -38,7 +38,9 @@
 
         .form {
             display: flex;
+            text-align: center;
             input {
+                margin: 0 1em;
                 flex: 1;
             }
         }

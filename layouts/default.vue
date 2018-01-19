@@ -22,7 +22,7 @@
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Lato');
+  // @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Lato');
   /*### Global  ###*/
 
   html {
@@ -59,7 +59,6 @@
   h5,
   h6 {
     font-family: $font-title;
-    font-weight: bold;
     margin: 1em 0em;
   }
 
@@ -157,7 +156,7 @@
 
   @media only screen and (min-width: $devDesktop) {
     .wrapper {
-      width: $wrapperXL;
+      max-width: $wrapperXL;
     }
     .shareCol {
       display: block;

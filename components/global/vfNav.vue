@@ -29,14 +29,10 @@
     }
 
     a {
-        @include resetLinks;
         flex: 1;
         padding: 0.5em 1em;
     }
 
-    a :hover {
-        @include floatLinks;
-    }
 
     ul {
         padding: 0px;
