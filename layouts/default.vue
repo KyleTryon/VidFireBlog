@@ -70,6 +70,9 @@
     line-height: 1.4em;
   }
 
+  *:focus {
+    outline: none;
+  }
 
   .wrapper {
     max-width: $wrapperSM;
@@ -144,7 +147,7 @@
     color: $color-white;
   }
 
-  input[type=text] {
+  input[type=email] {
     padding: 1.1em;
     text-align: center;
     border: none;

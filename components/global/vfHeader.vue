@@ -7,7 +7,7 @@
         <h1 id="siteTitle" itemprop="name">VidFireTV</h1>
         <h2>BLOG</h2>
       </div>
-      <a href="#">
+      <a href="https://discord.gg/VrrYcPT">
         <div class="btn btnCTA">
           COMMUNITY
         </div>

@@ -4,10 +4,10 @@
             <h1>
                 <strong>Content</strong> created <strong>for and by YouTubers</strong> <br />to help you grow your channel to <strong>success</strong>
             </h1>
-            <div class="form">
-                <input type="text" placeholder="Email">
-                <a href="#" class="btn">Get Tips</a>
-            </div>
+            <form class="form" data-netlify="true">
+                <input type="email" placeholder="Email@example.com">
+                <button class="btn" type="submit">Get Tips</button>
+            </form>
             <small>Only quality posts. No spam, no nonsense. That's a promise!</small>
         </section>
         <section class="blogFeed">
@@ -39,9 +39,10 @@
         .form {
             display: flex;
             text-align: center;
+
             input {
                 margin: 0 1em;
-                flex: 1;
+                flex: 1;                
             }
         }
     }

@@ -180,6 +180,10 @@
   .blogContent {
     margin-top: 2em;
 
+    h1, h2 {
+      font-size: 2.5em;
+    }
+
     a {
       @include resetLinks;
       font-weight: bold;
@@ -193,9 +197,15 @@
     }
 
     p {
+      display: flex;
+      flex-direction: column;
       line-height: 1.4em;
+      justify-content: center;
+      margin: 1em;
 
       img {
+        width: 60%;
+        height: auto;
         margin: auto;
       }
     }
