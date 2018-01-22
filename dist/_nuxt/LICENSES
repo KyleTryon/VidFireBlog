@@ -5,6 +5,14 @@
  * @license  MIT
  */
 
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
+/*!
+ * Vue.js v2.5.13
+ * (c) 2014-2017 Evan You
+ * Released under the MIT License.
+ */
+
 /*!
  * Font Awesome Free 5.0.1 by @fontawesome - http://fontawesome.com
  * License - http://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -13,6 +21,12 @@
 /*!
  * Font Awesome Free 5.0.1 by @fontawesome - http://fontawesome.com
  * License - http://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+/**
+ * vuex v3.0.1
+ * (c) 2017 Evan You
+ * @license MIT
  */
 
 /*!
@@ -28,33 +42,16 @@
  */
 
 /*!
- * Font Awesome Free 5.0.1 by @fontawesome - http://fontawesome.com
- * License - http://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-
-/*!
- * Vue.js v2.4.4
- * (c) 2014-2017 Evan You
- * Released under the MIT License.
- */
-
-/**
- * vuex v2.5.0
- * (c) 2017 Evan You
- * @license MIT
- */
-
-/*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
  * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
  * @license   Licensed under MIT license
  *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
- * @version   4.1.1
+ * @version   v4.2.2+97478eb6
  */
 
 /**
- * vue-meta v1.3.1
- * (c) 2017 Declan de Wet & Atinux
+ * vue-meta v1.4.2
+ * (c) 2018 Declan de Wet & Atinux
  * @license MIT
  */
 

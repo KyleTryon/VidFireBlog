@@ -30,7 +30,7 @@ module.exports = {
   },
 
   modules: [
-    ['nuxt-sass-resources-loader', './assets/scss/vars.scss']
+    ['nuxt-sass-resources-loader', './assets/scss/vars.scss', '@nuxtjs/sitemap']
   ],
   css: [
     '@fortawesome/fontawesome/styles.css'

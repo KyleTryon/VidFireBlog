@@ -49,7 +49,7 @@
       </header>
 
       <main class="blogContent">
-        <vue-markdown>{{post.fields.body}}</vue-markdown>
+        <vue-markdown :html="true">{{post.fields.body}}</vue-markdown>
       </main>
 
       <section class="blogAuthor" itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -197,10 +197,7 @@
     }
 
     p {
-      display: flex;
-      flex-direction: column;
       line-height: 1.4em;
-      justify-content: center;
       margin: 1em;
 
       img {

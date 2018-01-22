@@ -5,10 +5,23 @@
               <p>VidFireTV was created by Kyle Tryon</p>
           </div>
           <div class="col">second column</div>
-          <div class="col">third column</div>
+          <div class="col">
+              <p>Copyright {{thisYear}} </p>
+          </div>
       </div>
   </footer>
 </template>
+
+<script>
+export default {
+  computed: {
+    thisYear () {
+      return new Date().getFullYear()
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
     footer {

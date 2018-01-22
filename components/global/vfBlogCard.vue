@@ -33,6 +33,11 @@
     padding: 1em;
     display: flex;
 
+    .blogImg {
+      max-width: 100%;
+      height: auto;
+    }
+
     .blogCard {
       display: flex;
       flex-direction: column;

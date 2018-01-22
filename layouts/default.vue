@@ -35,6 +35,10 @@
     box-sizing: border-box;
     min-height: 100vh;
   }
+  iframe {
+    margin: auto;
+    text-align: center;
+  }
 
   body {
     min-height: 100%;
@@ -82,9 +86,8 @@
   }
   /*### Styles  ###*/
 
-  .blogImg {
-    width: 100%;
-    height: auto;
+  img {
+    max-width: 100%;
   }
 
   small, em {

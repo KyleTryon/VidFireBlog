@@ -39,6 +39,10 @@
         list-style-type: none;
         display: flex;
         justify-content: space-around;
+
+        li {
+            padding: 1em 0em;
+        }
     }
 
     /* Media Queries */
@@ -46,6 +50,10 @@
     @media only screen and (min-width: $devDesktop) {
         .nav {
             flex-direction: row;
+
+            li {
+            padding: 0em;
+        }
         }
     }
 </style>
