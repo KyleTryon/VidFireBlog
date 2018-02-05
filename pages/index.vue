@@ -10,7 +10,7 @@
   </section>
   <section class="communityTab wrapper">
     <div class="left">
-      <a href="https://discord.gg/VrrYcPT" class="btn btnCTA">Join The Community</a>
+      <a href="https://community.vidfire.tv/" class="btn btnCTA">Join The Community</a>
     </div>
     <div class="right">
       <img src="~/static/Discord.jpg" alt="Discord Server">

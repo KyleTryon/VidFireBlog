@@ -35,10 +35,6 @@
     box-sizing: border-box;
     min-height: 100vh;
   }
-  iframe {
-    margin: auto;
-    text-align: center;
-  }
 
   body {
     min-height: 100%;
